@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title> Shopping Cart | e-Mall</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="cart.js" async></script>
+<! the below link is copied from google fonts which are applied to the whole body>    
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+      
+</head>
+<body>
+    <div class="cart-header">
+    <div class="container">
+        <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="image/emall.png" width="125px"></a>
+            
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="product.html">Products </a></li>
+                <li><a href="">About </a></li>
+            </ul>
+        </nav>
+        <img src="image/bag.png" width="30px", height="30px"> 
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+    </div>
+
+    
+    <!-----------------cart items details-------------->
+
+    <section class="container content-section">
+            <h2 class="section-header">CART</h2>
+            <br>
+            <br>
+            <div class="cart-row">
+                <span class="cart-item cart-header cart-column">ITEM</span>
+                <span class="cart-price cart-header cart-column">PRICE</span>
+                <span class="cart-quantity cart-header cart-column">QUANTITY</span>
+            </div>
+            <div class="cart-items">
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="image/t11.png" width="100" height="100">
+                        <span class="cart-item-title">Black Naruto Tshirt</span>
+                    </div>
+                    <span class="cart-price cart-column">Rs. 400.00</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+                <div class="cart-row">
+                    <div class="cart-item cart-column">
+                        <img class="cart-item-image" src="image/w1.png" width="100" height="100">
+                        <span class="cart-item-title">Timeshowe</span>
+                    </div>
+                    <span class="cart-price cart-column">Rs. 2400.00</span>
+                    <div class="cart-quantity cart-column">
+                        <input class="cart-quantity-input" type="number" value="1">
+                        <button class="btn btn-danger" type="button">REMOVE</button>
+                    </div>
+                </div>
+            </div>
+            <div class="cart-total">
+                <strong class="cart-total-title">Total</strong>
+                <span class="cart-total-price">Rs. 2800</span>
+            </div>
+            <br>
+            <br>
+            <br>
+            <button class="btn btn-primary btn-purchase" type="button">PURCHASE</button>
+        </section>
+    </div>    
+<!---------------------------footer---------------------->
+    
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download our app for Android and ios platforms.</p>
+                <div class="app-logo">
+                    <img src="image/app-store.png">
+                    <img src="image/play-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="image/emall.png" width="125">
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>About</li>
+                    <li>Return Policy</li>
+                    <li>Career</li>
+                    
+                </ul>
+                
+            </div>
+            <div class="footer-col-4">
+                <h3>Contact us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Aman </p>
+    </div>
+</div>
+    
+<!----------js for toggle menu------------>
+    
+    <script>
+        var MenuItems= document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px")
+                {
+                    MenuItems.style.maxHeight="200px";
+                }
+        
+              else{
+                 MenuItems.style.maxHeight="0px";
+             }
+        
+        }
+        
+        
+        
+    </script>
+    
+
+
+</body>
+</html>

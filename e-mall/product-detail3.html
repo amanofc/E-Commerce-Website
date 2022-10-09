@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width-device-width, initial-scale=1.0">
+    <title>Product details | e-Mall</title>
+    <link rel="stylesheet" href="style.css"> 
+    <script src="cart.js"></script>
+<! the below link is copied from google fonts which are applied to the whole body>    
+   <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Zilla+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+      
+</head>
+<body>
+    
+    <div class="container">
+        <div class="navbar">
+        <div class="logo">
+            <a href="index.html"><img src="image/emall.png" width="125px"></a>
+            
+        </div>
+        <nav>
+            <ul id="MenuItems">
+                <li><a href="index.html">Home </a></li>
+                <li><a href="product.html">Products </a></li>
+                <li><a href="">About </a></li>
+            </ul>
+        </nav>
+        <a href="cart.html"><img src="image/bag.png" width="30px", height="30px"></a>
+            <img src="image/menu.png" class="menu-icon" onclick="menutoggle()">
+    </div>
+    
+    </div>
+<!---------single product details--------->
+    
+<div class="small-container single-product">
+    <div class="row">
+        <div class="col-2">
+            <img src="image/s11.png" width="80%" id="ProductImg">
+            
+            <div class="small-img-row">
+                <div class="small-img-col">
+                    <img src="image/s11.png" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="image/s12.png" width="100%" class="small-img">
+                </div>
+                <div class="small-img-col">
+                    <img src="image/s13.png" width="100%" class="small-img">
+                </div>
+            </div>
+           
+        </div>
+        <div class="col-2">
+            <p>Home/Shirt</p>
+            <h1>Casual Shirt</h1>
+            <h4>&#8377 1400.00</h4>
+            <select>
+                <option>Select Size</option>
+                <option>S</option>
+                <option>M</option>
+                <option>L</option>
+                <option>XL</option>
+            </select>
+            <input type="number" value="1">
+            <a href="" class="btn">Add to Cart</a>
+            <h3>Product Details</h3>
+            <hr>
+            <br>
+            <p>Worn by pioneers; outliers and outcasts. Western shirts have been tested by generations and continue to define the modern dress code.</p>
+        </div>
+    </div>
+</div>    
+    
+<!--------------------title-------->    
+    
+    <div class="small-container">
+        <div class="row row-2">
+            <h2>Related Products</h2>
+            <p>View More</p>
+        </div>
+    </div>
+<!--------------------featured products-------->
+    
+    
+<div class="small-container">
+    
+    
+    <div class="row">
+        <div class="col-4">
+            <a href="product-detail.html"> <img src="image/t11.png" ></a>
+            <h4>Black Naruto Tshirt</h4>
+            <p>&#8377 400.00</p>
+        </div>
+        <div class="col-4">
+            <a href="product-detail2.html"> <img src="image/w1.png" ></a>
+            <h4><br>Timeshower</h4>
+            <p>&#8377 2400.00</p>
+        </div>
+        <div class="col-4">
+            <a href="product-detail3.html"> <img src="image/s11.png" ></a>
+            <h4><br>Black Shoes</h4>
+            <p>&#8377 1400.00</p>
+        </div>
+        <div class="col-4">
+            <a href="product-detail4.html"> <img src="image/t21.png" ></a>
+            <h4><br>Tokyo Ghoul Tshirt</h4>
+            <p>&#8377 699.00</p>
+        </div>
+    </div>
+    
+
+    
+</div>  
+  
+
+<!---------------------------footer---------------------->
+    
+<div class="footer">
+    <div class="container">
+        <div class="row">
+            <div class="footer-col-1">
+                <h3>Download Our App</h3>
+                <p>Download our app for Android and ios platforms.</p>
+                <div class="app-logo">
+                    <img src="image/app-store.png">
+                    <img src="image/play-store.png">
+                </div>
+            </div>
+            <div class="footer-col-2">
+                <img src="image/emall.png" width="125">
+            </div>
+            <div class="footer-col-3">
+                <h3>Useful Links</h3>
+                <ul>
+                    <li>Coupons</li>
+                    <li>About</li>
+                    <li>Return Policy</li>
+                    <li>Career</li>
+                    
+                </ul>
+                
+            </div>
+            <div class="footer-col-4">
+                <h3>Contact us</h3>
+                <ul>
+                    <li>Facebook</li>
+                    <li>Twitter</li>
+                    <li>Instagram</li>
+                    <li>Youtube</li>
+                    
+                </ul>
+            </div>
+        </div>
+        <hr>
+        <p class="copyright">Copyright 2021 - Aman </p>
+    </div>
+</div>
+    
+<!----------js for toggle menu------------->
+    
+    <script>
+        var MenuItems= document.getElementById("MenuItems");
+        MenuItems.style.maxHeight="0px";
+        
+        function menutoggle(){
+            if(MenuItems.style.maxHeight=="0px")
+                {
+                    MenuItems.style.maxHeight="200px";
+                }
+        
+              else{
+                 MenuItems.style.maxHeight="0px";
+             }
+        
+        }
+        
+        
+        
+    </script>
+    
+<!-------------------js for product gallary-------------------->  
+    <script>
+        var ProductImg=document.getElementById("ProductImg");
+        var SmallImg=document.getElementsByClassName("small-img");
+        
+        SmallImg[0].onclick=function()
+        {
+            ProductImg.src=SmallImg[0].src;
+        }
+        SmallImg[1].onclick=function()
+        {
+            ProductImg.src=SmallImg[1].src;
+        }
+        SmallImg[2].onclick=function()
+        {
+            ProductImg.src=SmallImg[2].src;
+        }
+    </script>
+    
+    
+
+</body>
+</html>
